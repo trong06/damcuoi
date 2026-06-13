@@ -3,35 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Player</title>
+    <title>Video Đám Cưới</title>
     <style>
+        /* Xóa khoảng trắng, ẩn thanh cuộn và cài đặt nền đen */
         body, html {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
             background-color: black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             overflow: hidden;
         }
-        /* Ép video tự động căn chỉnh vừa màn hình, không bị méo tỉ lệ */
-        video {
-            width: 100%;
-            height: 100%;
-            max-width: 100vw;
-            max-height: 100vh;
-            outline: none;
+        
+        /* Ép khung iframe của Facebook chiếm 100% màn hình */
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            border: none;
         }
     </style>
 </head>
 <body>
 
-    <video controls playsinline>
-        <source src="https://drive.google.com/uc?export=download&id=1jis2BRrIf5Fcv37TOfbKjDX6w3c4VKKT" type="video/mp4">
-        Trình duyệt của bạn không hỗ trợ thẻ video.
-    </video>
+    <iframe 
+        src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2231553491033622%2F&show_text=false&width=560&t=0" 
+        style="border:none;overflow:hidden" 
+        scrolling="no" 
+        frameborder="0" 
+        allowfullscreen="true" 
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+    </iframe>
 
 </body>
 </html>
