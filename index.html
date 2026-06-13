@@ -10,25 +10,28 @@
             padding: 0;
             width: 100%;
             height: 100%;
-            overflow: hidden; 
             background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
         }
-        iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            border: none;
+        /* Ép video tự động căn chỉnh vừa màn hình, không bị méo tỉ lệ */
+        video {
+            width: 100%;
+            height: 100%;
+            max-width: 100vw;
+            max-height: 100vh;
+            outline: none;
         }
     </style>
 </head>
 <body>
 
-    <iframe 
-        src="https://drive.google.com/file/d/1jis2BRrIf5Fcv37TOfbKjDX6w3c4VKKT/preview" 
-        allow="fullscreen">
-    </iframe>
+    <video controls playsinline>
+        <source src="https://drive.google.com/uc?export=download&id=1jis2BRrIf5Fcv37TOfbKjDX6w3c4VKKT" type="video/mp4">
+        Trình duyệt của bạn không hỗ trợ thẻ video.
+    </video>
 
 </body>
 </html>
